@@ -4,9 +4,9 @@ const path = require("path");
 const PORT = process.env.PORT;
 
 
-app.get("/", (req, res) => {
-    res.send({ hello: "world" });
-});
+// app.get("/", (req, res) => {
+//     res.send({ hello: "world" });
+// });
 
 app.use(express.static('asset'))
 
