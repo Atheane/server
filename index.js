@@ -1,7 +1,7 @@
-const app = express();
 const express = require("express");
+const app = express();
 const path = require("path");
-const PORT = process.env.PORT;
+const port = process.env.PORT;
 
 
 // app.get("/", (req, res) => {
@@ -11,8 +11,9 @@ const PORT = process.env.PORT;
 app.use(express.static('asset'))
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
-app.listen(PORT);
+app.listen(port, function() {
+  console.log('App is running on port: ' + port);
+});
